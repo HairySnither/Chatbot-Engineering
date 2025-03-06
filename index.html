@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCSE Engineering Help - Expert Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>GCSE Engineering Help - Expert Guide</h1>
+        <p>Get expert answers to your GCSE Engineering questions.</p>
+    </header>
+
+    <!-- Fact Boxes Section -->
+    <section class="fact-section">
+        <h2>Engineering Processes Explained</h2>
+        <div class="fact-box">
+            <h3>CAD (Computer-Aided Design)</h3>
+            <p>CAD is used to create detailed 2D and 3D models of products, helping engineers visualize designs and simulate performance.</p>
+        </div>
+        <div class="fact-box">
+            <h3>Manufacturing Processes</h3>
+            <p>Includes machining, casting, welding, and 3D printing. Each has its own applications, advantages, and limitations.</p>
+        </div>
+    </section>
+
+    <!-- Ask Us Section -->
+    <section class="ask-us-section">
+        <h2>Ask Us!</h2>
+        <div class="question-section">
+            <select id="questionSelect" onchange="showResponse()">
+                <option value="">--Select a Question--</option>
+                <option value="What is GCSE Engineering?">What is GCSE Engineering?</option>
+                <option value="What are the key skills needed for GCSE Engineering?">Key skills for GCSE Engineering?</option>
+                <option value="How can I prepare for the exam?">Exam preparation tips?</option>
+                <option value="What are the main manufacturing processes?">Main manufacturing processes?</option>
+                <option value="Why is CAD important in engineering?">Importance of CAD in engineering?</option>
+                <option value="What are the hand tools used in engineering?">What are the hand tools used in engineering?</option>
+            </select>
+        </div>
+        <div id="response"></div>
+    </section>
+ 
+
+ <!-- Multiple Choice Quiz -->
+    <section class="quiz-section">
+        <h2>Test Your Knowledge!</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What does CAD stand for?</p>
+                <input type="radio" name="q1" value="a"> Computer-Aided Design<br>
+                <input type="radio" name="q1" value="b"> Computerized Automated Development<br>
+            </div>
+            <div class="question">
+                <p>2. Which process is NOT a manufacturing method?</p>
+                <input type="radio" name="q2" value="a"> Welding<br>
+                <input type="radio" name="q2" value="b"> Debugging<br>
+             <div class="question">
+                    <p>3. Which is NOT permanently joined?</p>
+                    <input type="radio" name="q3" value="a"> Glue<br>
+                    <input type="radio" name="q3" value="b"> Screws<br>
+            </div>
+            <button type="button" onclick="checkQuiz(event)">Submit Quiz</button>
+        </form>
+        <div id="quizResult"></div>
+    </section>
+
+    <!-- Fade-in and Fade-out Image -->
+    <img id="fadeImage" src="https://yt3.googleusercontent.com/8xPXZqdczwZuECmJQBi-aqJ3_h5Zqc3EmO0qCwjXzGehSZRwi5MF0Iz3wBa88EKFw_k_Et2zUlk=s900-c-k-c0x00ffffff-no-rj" alt="Success Image" class="fade-image">
+</div>
+
+<script>
+    function showResponse() {
+        const question = document.getElementById('questionSelect').value;
+        const responseDiv = document.getElementById('response');
+        let response = '';
+
+        switch(question) {
+            case 'What is GCSE Engineering?':
+                response = 'GCSE Engineering covers design, manufacturing, materials, and sustainability principles.';
+                break;
+            case 'What are the key skills needed for GCSE Engineering?':
+                response = 'Key skills include problem-solving, creativity, CAD proficiency, and knowledge of materials.';
+                break;
+            case 'How can I prepare for the exam?':
+                response = 'Study past papers, review materials, practice CAD software, and understand key engineering concepts.';
+                break;
+            case 'What are the main manufacturing processes?':
+                response = 'Manufacturing processes include machining, casting, welding, and additive manufacturing.';
+                break;
+            case 'Why is CAD important in engineering?':
+                response = 'CAD helps engineers design, visualize, and test products efficiently before manufacturing.';
+                break;
+            case 'What are the hand tools used in engineering?':
+                response = 'The hand tools used consist of screwdrivers, hammers, pliers, wrenches/spanners, files, vices, measuring tools (rulers, calipers, tape measures, micrometers)';
+                break;
+            default:
+                response = 'Please select a question to see the answer.';
+        }
+
+        responseDiv.innerText = response;
+    }
+
+    function checkQuiz(event) {
+        event.preventDefault(); // Prevent form submission (page reload)
+
+        let score = 0;
+        const quizResult = document.getElementById('quizResult');
+        const fadeImage = document.getElementById('fadeImage'); // The image element
+
+        const q1Answer = document.querySelector('input[name="q1"]:checked')?.value;
+        const q2Answer = document.querySelector('input[name="q2"]:checked')?.value;
+        const q3Answer = document.querySelector('input[name="q3"]:checked')?.value;
+
+        // Check the answers and calculate the score
+        if (q1Answer === 'a') {
+            score++;
+        }
+
+        if (q2Answer === 'b') {
+            score++;
+        }
+        if (q3Answer === 'b') {
+            score++;
+        }
+
+        quizResult.innerText = `You scored ${score}/3!`;
+
+        // If the quiz is answered correctly (100% correct)
+        if (score === 3) {
+            // Fade the image in (make it visible and fade in)
+            fadeImage.classList.add('visible');
+            
+            // After 3 seconds, fade the image out (remove the visible class)
+            setTimeout(() => {
+                fadeImage.classList.remove('visible');
+            }, 3000); // Change the timing here based on how long you want it to stay
+        }
+    }
+</script>
+
+</body>
+</html>
