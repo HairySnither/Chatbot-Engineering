@@ -3,27 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCSE Engineering Help - Expert Guide</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GCSE AQA Engineering Help</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>GCSE Engineering Help - Expert Guide</h1>
-        <p>Get expert answers to your GCSE Engineering questions.</p>
+        <h1>GCSE AQA Engineering Help</h1>
+        <p>Your guide to mastering GCSE AQA Engineering topics.</p>
     </header>
 
-    <!-- Fact Boxes Section -->
-    <section class="fact-section">
-        <h2>Engineering Processes Explained</h2>
-        <div class="fact-box">
-            <h3>CAD (Computer-Aided Design)</h3>
-            <p>CAD is used to create detailed 2D and 3D models of products, helping engineers visualize designs and simulate performance.</p>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <h2>Welcome to GCSE AQA Engineering Help</h2>
+        <p>This website is designed to help you understand and excel in your GCSE AQA Engineering course. Explore the topics, ask questions, and test your knowledge with our quiz.</p>
+    </section>
+
+    <!-- Engineering Topics Section -->
+    <section class="topics-section">
+        <h2>Engineering Topics</h2>
+        <div class="topic">
+            <img src="https://vectormine.b-cdn.net/wp-content/uploads/materials_science_2_diagram_outline-1.jpg" alt="Materials Science">
+            <div>
+                <h3>Materials Science</h3>
+                <p>Materials science involves the study of the properties and applications of materials of construction or manufacture (such as ceramics, metals, polymers, and composites). Understanding materials science is crucial for engineers to select the right materials for their projects.</p>
+            </div>
         </div>
-        <div class="fact-box">
-            <h3>Manufacturing Processes</h3>
-            <p>Includes machining, casting, welding, and 3D printing. Each has its own applications, advantages, and limitations.</p>
+        <div class="topic">
+            <img src="https://ts2.mm.bing.net/th?id=OIP.e906YBbELXcZgbks0saySAHaFj&pid=15.1" alt="Mechanical Systems">
+            <div>
+                <h3>Mechanical Systems</h3>
+                <p>Mechanical systems include the design and analysis of mechanical components and systems. This includes understanding forces, motion, and energy. Key topics include statics, dynamics, thermodynamics, and fluid mechanics.</p>
+            </div>
+        </div>
+        <div class="topic">
+            <img src="https://d77da31580fbc8944c00-52b01ccbcfe56047120eec75d9cb2cbd.ssl.cf6.rackcdn.com/5f016128-9015-4f4c-a41a-b155a26c5dfd/domestic-electric-circuit.jpg" alt="Electrical Systems">
+            <div>
+                <h3>Electrical Systems</h3>
+                <p>Electrical systems cover the principles of electricity and electronics. This includes understanding circuits, electrical components, and systems. Key topics include circuit theory, electromagnetism, and power systems.</p>
+            </div>
+        </div>
+        <div class="topic">
+            <img src="https://th.bing.com/th/id/OIP.U8MtmVV_9UAsPy2NJAA5LAHaEf?rs=1&pid=ImgDetMain" alt="Manufacturing Processes">
+            <div>
+                <h3>Manufacturing Processes</h3>
+                <p>Manufacturing processes involve the methods and techniques used to produce goods. This includes machining, casting, welding, and additive manufacturing (3D printing). Understanding these processes is essential for designing and creating engineered products.</p>
+            </div>
+        </div>
+        <div class="topic">
+            <img src="data:image/jpeg;base64,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" alt="CAD (Computer-Aided Design)">
+            <div>
+                <h3>CAD (Computer-Aided Design)</h3>
+                <p>CAD is used to create detailed 2D and 3D models of products, helping engineers visualize designs and simulate performance. CAD software is an essential tool for modern engineering design.</p>
+            </div>
+        </div>
+        <div class="topic">
+            <img src="https://th.bing.com/th/id/OIP.wKmfpcNipxlS5CVz9WFsmQAAAA?w=228&h=180&c=7&r=0&o=5&pid=1.7" alt="Sustainability in Engineering">
+            <div>
+                <h3>Sustainability in Engineering</h3>
+                <p>Sustainability in engineering involves designing products and systems that minimize environmental impact and use resources efficiently. This includes considering the entire lifecycle of a product, from raw material extraction to disposal.</p>
+            </div>
         </div>
     </section>
 
@@ -31,7 +72,7 @@
     <section class="ask-us-section">
         <h2>Ask Us!</h2>
         <div class="question-section">
-            <select id="questionSelect" onchange="showResponse()">
+            <select id="questionSelect">
                 <option value="">--Select a Question--</option>
                 <option value="What is GCSE Engineering?">What is GCSE Engineering?</option>
                 <option value="What are the key skills needed for GCSE Engineering?">Key skills for GCSE Engineering?</option>
@@ -40,107 +81,92 @@
                 <option value="Why is CAD important in engineering?">Importance of CAD in engineering?</option>
                 <option value="What are the hand tools used in engineering?">What are the hand tools used in engineering?</option>
             </select>
+            <button type="button" onclick="showResponse()">Submit</button>
         </div>
         <div id="response"></div>
     </section>
- 
 
- <!-- Multiple Choice Quiz -->
+    <!-- Multiple Choice Quiz -->
     <section class="quiz-section">
         <h2>Test Your Knowledge!</h2>
         <form id="quizForm">
             <div class="question">
                 <p>1. What does CAD stand for?</p>
-                <input type="radio" name="q1" value="a"> Computer-Aided Design<br>
-                <input type="radio" name="q1" value="b"> Computerized Automated Development<br>
+                <input type="radio" id="q1a" name="q1" value="a">
+                <label for="q1a">Computer-Aided Design</label>
+                <input type="radio" id="q1b" name="q1" value="b">
+                <label for="q1b">Computerized Automated Development</label>
             </div>
             <div class="question">
                 <p>2. Which process is NOT a manufacturing method?</p>
-                <input type="radio" name="q2" value="a"> Welding<br>
-                <input type="radio" name="q2" value="b"> Debugging<br>
-             <div class="question">
-                    <p>3. Which is NOT permanently joined?</p>
-                    <input type="radio" name="q3" value="a"> Glue<br>
-                    <input type="radio" name="q3" value="b"> Screws<br>
+                <input type="radio" id="q2a" name="q2" value="a">
+                <label for="q2a">Welding</label>
+                <input type="radio" id="q2b" name="q2" value="b">
+                <label for="q2b">Debugging</label>
+            </div>
+            <div class="question">
+                <p>3. Which is NOT permanently joined?</p>
+                <input type="radio" id="q3a" name="q3" value="a">
+                <label for="q3a">Glue</label>
+                <input type="radio" id="q3b" name="q3" value="b">
+                <label for="q3b">Screws</label>
+            </div>
+            <div class="question">
+                <p>4. What is the primary purpose of a lathe?</p>
+                <input type="radio" id="q4a" name="q4" value="a">
+                <label for="q4a">Cutting</label>
+                <input type="radio" id="q4b" name="q4" value="b">
+                <label for="q4b">Turning</label>
+            </div>
+            <div class="question">
+                <p>5. Which material is known for its high tensile strength?</p>
+                <input type="radio" id="q5a" name="q5" value="a">
+                <label for="q5a">Plastic</label>
+                <input type="radio" id="q5b" name="q5" value="b">
+                <label for="q5b">Steel</label>
+            </div>
+            <div class="question">
+                <p>6. What does CNC stand for?</p>
+                <input type="radio" id="q6a" name="q6" value="a">
+                <label for="q6a">Computer Numerical Control</label>
+                <input type="radio" id="q6b" name="q6" value="b">
+                <label for="q6b">Central Numerical Control</label>
+            </div>
+            <div class="question">
+                <p>7. Which process is used to join metals by melting them together?</p>
+                <input type="radio" id="q7a" name="q7" value="a">
+                <label for="q7a">Welding</label>
+                <input type="radio" id="q7b" name="q7" value="b">
+                <label for="q7b">Soldering</label>
+            </div>
+            <div class="question">
+                <p>8. What is the main advantage of 3D printing?</p>
+                <input type="radio" id="q8a" name="q8" value="a">
+                <label for="q8a">Speed</label>
+                <input type="radio" id="q8b" name="q8" value="b">
+                <label for="q8b">Customization</label>
+            </div>
+            <div class="question">
+                <p>9. What is the purpose of a resistor in an electrical circuit?</p>
+                <input type="radio" id="q9a" name="q9" value="a">
+                <label for="q9a">Increase current</label>
+                <input type="radio" id="q9b" name="q9" value="b">
+                <label for="q9b">Limit current</label>
+            </div>
+            <div class="question">
+                <p>10. What is the unit of electrical resistance?</p>
+                <input type="radio" id="q10a" name="q10" value="a">
+                <label for="q10a">Ohm</label>
+                <input type="radio" id="q10b" name="q10" value="b">
+                <label for="q10b">Watt</label>
             </div>
             <button type="button" onclick="checkQuiz(event)">Submit Quiz</button>
         </form>
         <div id="quizResult"></div>
     </section>
-
-    <!-- Fade-in and Fade-out Image -->
-    <img id="fadeImage" src="https://yt3.googleusercontent.com/8xPXZqdczwZuECmJQBi-aqJ3_h5Zqc3EmO0qCwjXzGehSZRwi5MF0Iz3wBa88EKFw_k_Et2zUlk=s900-c-k-c0x00ffffff-no-rj" alt="Success Image" class="fade-image">
 </div>
 
-<script>
-    function showResponse() {
-        const question = document.getElementById('questionSelect').value;
-        const responseDiv = document.getElementById('response');
-        let response = '';
-
-        switch(question) {
-            case 'What is GCSE Engineering?':
-                response = 'GCSE Engineering covers design, manufacturing, materials, and sustainability principles.';
-                break;
-            case 'What are the key skills needed for GCSE Engineering?':
-                response = 'Key skills include problem-solving, creativity, CAD proficiency, and knowledge of materials.';
-                break;
-            case 'How can I prepare for the exam?':
-                response = 'Study past papers, review materials, practice CAD software, and understand key engineering concepts.';
-                break;
-            case 'What are the main manufacturing processes?':
-                response = 'Manufacturing processes include machining, casting, welding, and additive manufacturing.';
-                break;
-            case 'Why is CAD important in engineering?':
-                response = 'CAD helps engineers design, visualize, and test products efficiently before manufacturing.';
-                break;
-            case 'What are the hand tools used in engineering?':
-                response = 'The hand tools used consist of screwdrivers, hammers, pliers, wrenches/spanners, files, vices, measuring tools (rulers, calipers, tape measures, micrometers)';
-                break;
-            default:
-                response = 'Please select a question to see the answer.';
-        }
-
-        responseDiv.innerText = response;
-    }
-
-    function checkQuiz(event) {
-        event.preventDefault(); // Prevent form submission (page reload)
-
-        let score = 0;
-        const quizResult = document.getElementById('quizResult');
-        const fadeImage = document.getElementById('fadeImage'); // The image element
-
-        const q1Answer = document.querySelector('input[name="q1"]:checked')?.value;
-        const q2Answer = document.querySelector('input[name="q2"]:checked')?.value;
-        const q3Answer = document.querySelector('input[name="q3"]:checked')?.value;
-
-        // Check the answers and calculate the score
-        if (q1Answer === 'a') {
-            score++;
-        }
-
-        if (q2Answer === 'b') {
-            score++;
-        }
-        if (q3Answer === 'b') {
-            score++;
-        }
-
-        quizResult.innerText = `You scored ${score}/3!`;
-
-        // If the quiz is answered correctly (100% correct)
-        if (score === 3) {
-            // Fade the image in (make it visible and fade in)
-            fadeImage.classList.add('visible');
-            
-            // After 3 seconds, fade the image out (remove the visible class)
-            setTimeout(() => {
-                fadeImage.classList.remove('visible');
-            }, 3000); // Change the timing here based on how long you want it to stay
-        }
-    }
-</script>
+<script src="sketch.js"></script>
 
 </body>
 </html>
