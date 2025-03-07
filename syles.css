@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
 }
 
 .container {
@@ -11,80 +12,121 @@ body {
     padding: 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 header {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     background-color: #00509e;
     color: white;
     border-radius: 10px 10px 0 0;
 }
 
-.chatbot-section, .quiz-section {
+.intro-section, .ask-us-section, .quiz-section, .topics-section {
     margin: 20px 0;
-    padding: 15px;
+    padding: 20px;
     background: #e3f2fd;
     border-radius: 10px;
+    transition: background 0.3s ease;
 }
 
-#chatbox {
-    height: 200px;
-    overflow-y: auto;
+.intro-section:hover, .ask-us-section:hover, .quiz-section:hover, .topics-section:hover {
+    background: #d1e7ff;
+}
+
+.topic {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.topic img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    cursor: pointer;
+}
+
+.topic img:hover {
+    transform: scale(1.1);
+}
+
+.topic img.full-size {
+    transform: scale(2.5);
+    z-index: 1000;
+}
+
+.topic h3 {
+    margin-top: 0;
+}
+
+#response {
+    margin-top: 20px;
     padding: 10px;
+    background: #fff3e0;
+    border: 1px solid #ffcc80;
+    border-radius: 5px;
+}
+
+.quiz-section .question {
+    margin-bottom: 15px;
+}
+
+.quiz-section .question p {
+    margin: 0 0 5px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.quiz-section label {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
-    background: white;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.user-message {
-    background: #c8e6c9;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 5px;
-    text-align: right;
+.quiz-section label:hover {
+    background: #f0f0f0;
 }
 
-.bot-message {
-    background: #ffccbc;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 5px;
-    text-align: left;
+.quiz-section input[type="radio"] {
+    display: none;
+}
+
+.quiz-section input[type="radio"]:checked + label {
+    background: #d1e7ff;
+    border-color: #00509e;
 }
 
 input, button {
     display: block;
     width: 100%;
-    margin: 5px 0;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 15px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
     background: #00509e;
     color: white;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background: #003f7f;
-}
-
-/* Initial state of the image: hidden */
-.fade-image {
-    opacity: 0;
-    transition: opacity 2s ease-in-out; /* Smooth fade effect */
-    display: none; /* Initially hidden */
-    width: 100%; /* Adjust based on your preference */
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-/* If the image is visible */
-.fade-image.visible {
-    display: block; /* Show the image */
-    opacity: 1; /* Make it visible */
 }
