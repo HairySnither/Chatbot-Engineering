@@ -28,6 +28,36 @@ header {
     border-radius: 10px 10px 0 0;
 }
 
+nav {
+    background-color: #003f7f;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #00509e;
+}
+
 .intro-section, .ask-us-section, .quiz-section, .topics-section {
     margin: 20px 0;
     padding: 20px;
@@ -110,6 +140,11 @@ header {
     border-color: #00509e;
 }
 
+.quiz-section .incorrect {
+    background: #ffcccc;
+    border-color: #ff0000;
+}
+
 input, button {
     display: block;
     width: 100%;
@@ -129,4 +164,17 @@ button {
 
 button:hover {
     background: #003f7f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00509e;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
 }
