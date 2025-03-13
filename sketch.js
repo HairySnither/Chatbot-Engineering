@@ -49,36 +49,65 @@ function checkQuiz(event) {
     // Check the answers and calculate the score
     if (q1Answer === 'a') {
         score++;
+    } else {
+        markIncorrect('q1');
     }
     if (q2Answer === 'b') {
         score++;
+    } else {
+        markIncorrect('q2');
     }
     if (q3Answer === 'b') {
         score++;
+    } else {
+        markIncorrect('q3');
     }
     if (q4Answer === 'b') {
         score++;
+    } else {
+        markIncorrect('q4');
     }
     if (q5Answer === 'b') {
         score++;
+    } else {
+        markIncorrect('q5');
     }
     if (q6Answer === 'a') {
         score++;
+    } else {
+        markIncorrect('q6');
     }
     if (q7Answer === 'a') {
         score++;
+    } else {
+        markIncorrect('q7');
     }
     if (q8Answer === 'b') {
         score++;
+    } else {
+        markIncorrect('q8');
     }
     if (q9Answer === 'b') {
         score++;
+    } else {
+        markIncorrect('q9');
     }
     if (q10Answer === 'a') {
         score++;
+    } else {
+        markIncorrect('q10');
     }
 
     quizResult.innerText = `You scored ${score}/10!`;
+}
+
+function markIncorrect(question) {
+    const labels = document.querySelectorAll(`input[name="${question}"] + label`);
+    labels.forEach(label => {
+        if (label.previousElementSibling.checked) {
+            label.classList.add('incorrect');
+        }
+    });
 }
 
 // Add event listener to images for expanding on click
